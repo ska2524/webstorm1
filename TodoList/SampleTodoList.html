@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head> <!--//html에서 개발하는 방식-->
+<body>
+<div class="warpper">
+    <div class="inputDiv">
+        <input type="text" id="inputText" value="AAAAA">
+        <button id="btn">Save</button>
+    </div>
+    <div class="listDiv">
+        <ul id="listUL">
+
+        </ul>
+    </div>
+</div>
+<script>
+    var idx = 0;
+    var btnObj = document.querySelector("#btn");
+    /*에크만5버전부터 씀 문법은 CSS랑 같음*/
+    var inputTextObj = document.querySelector("#inputText");
+    //버튼눌리면 ul객체 사용
+    var listULObj = document.querySelector("#listUL"); // ID앞에는 #을 붙여야함.
+    console.log(btnObj);
+    btnObj.addEventListener("click", function () {
+        //눌리는지 봐야함.
+        console.log(inputTextObj.value);
+
+        var liObj = document.createElement("li")
+
+
+        var aa = tt.appendChild(liObj);
+
+
+        console.log(checkbox)
+        var content = document.createTextNode(idx++ + ":" + inputTextObj.value);
+
+        aa.addEventListener("click", function () {
+            console.log(this.innerText);
+        });
+        aa.appendChild(content);
+        listULObj.appendChild(aa);
+    });
+</script>
+</body>
+</html>
